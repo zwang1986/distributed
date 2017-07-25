@@ -1,0 +1,120 @@
+2017-07-25 01:31:19,759 INFO  [main] client.RMProxy (RMProxy.java:createRMProxy(98)) - Connecting to ResourceManager at ec2-54-222-217-210.cn-north-1.compute.amazonaws.com.cn/172.31.4.217:8032
+
+
+Container: container_1500743829967_0030_01_000001 on ip-172-31-15-100.cn-north-1.compute.internal_46203
+=========================================================================================================
+LogType:stderr
+Log Upload Time:24-Jul-2017 23:31:34
+LogLength:704
+Log Contents:
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/root/ephemeral-hdfs/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/mnt/yarn-local/filecache/48/knit-1.0-SNAPSHOT.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+log4j:WARN No appenders could be found for logger (io.continuum.knit.ApplicationMaster$).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+LogType:stdout
+Log Upload Time:24-Jul-2017 23:31:34
+LogLength:0
+Log Contents:
+
+
+
+Container: container_1500743829967_0030_01_000002 on ip-172-31-15-100.cn-north-1.compute.internal_46203
+=========================================================================================================
+LogType:stderr
+Log Upload Time:24-Jul-2017 23:31:34
+LogLength:10239950
+Log Contents:
+distributed.nanny - INFO -         Start Nanny at: 'tcp://172.31.15.100:46715'
+distributed.worker - INFO -       Start worker at:  tcp://172.31.15.100:42065
+distributed.worker - INFO -              nanny at:        172.31.15.100:46715
+distributed.worker - INFO -               http at:        172.31.15.100:39361
+distributed.worker - INFO -              bokeh at:        172.31.15.100:8789
+distributed.worker - INFO - Waiting to connect to:   tcp://172.31.4.217:45665
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                          1
+distributed.worker - INFO -                Memory:                    0.50 GB
+distributed.worker - INFO -       Local Directory:            worker-lqy3fgbm
+distributed.worker - INFO - -------------------------------------------------
+distributed.nanny - ERROR - Failed to start worker
+Traceback (most recent call last):
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/distributed/nanny.py", line 456, in run
+    yield worker._start(*worker_start_args)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1055, in run
+    value = future.result()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/concurrent.py", line 238, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 4, in raise_exc_info
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1063, in run
+    yielded = self.gen.throw(*exc_info)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/distributed/worker.py", line 302, in _start
+    yield self._register_with_scheduler()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1055, in run
+    value = future.result()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/concurrent.py", line 238, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 4, in raise_exc_info
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1069, in run
+    yielded = self.gen.send(value)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/distributed/worker.py", line 243, in _register_with_scheduler
+    raise ValueError("Unexpected response from register: %r" % (resp,))
+ValueError: Unexpected response from register: b'OK'
+tornado.application - ERROR - Exception in callback functools.partial(<function wrap.<locals>.null_wrapper at 0x7f487c36fae8>, <tornado.concurrent.Future object at 0x7f487c269518>)
+Traceback (most recent call last):
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/ioloop.py", line 605, in _run_callback
+    ret = callback()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/stack_context.py", line 277, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/ioloop.py", line 626, in _discard_future_result
+    future.result()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/concurrent.py", line 238, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 4, in raise_exc_info
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1063, in run
+    yielded = self.gen.throw(*exc_info)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/distributed/nanny.py", line 135, in _start
+    response = yield self.instantiate()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1055, in run
+    value = future.result()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/concurrent.py", line 238, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 4, in raise_exc_info
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1063, in run
+    yielded = self.gen.throw(*exc_info)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/distributed/nanny.py", line 194, in instantiate
+    yield self.process.start()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1055, in run
+    value = future.result()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/concurrent.py", line 238, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 4, in raise_exc_info
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1063, in run
+    yielded = self.gen.throw(*exc_info)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/distributed/nanny.py", line 300, in start
+    yield self._wait_until_running()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1055, in run
+    value = future.result()
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/concurrent.py", line 238, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 4, in raise_exc_info
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/tornado/gen.py", line 1069, in run
+    yielded = self.gen.send(value)
+  File "/mnt/yarn-local/usercache/root/appcache/application_1500743829967_0030/container_1500743829967_0030_01_000002/PYTHON_DIR/dask-35d2a1ee201208ae9fca6905fa88ea9e54557b58/lib/python3.6/site-packages/distributed/nanny.py", line 395, in _wait_until_running
+    raise msg
+ValueError: Unexpected response from register: b'OK'
+distributed.nanny - WARNING - Restarting worker
+distributed.worker - INFO -       Start worker at:  tcp://172.31.15.100:39877
+distributed.worker - INFO -              nanny at:        172.31.15.100:46715
+distributed.worker - INFO -               http at:        172.31.15.100:37631
+distributed.worker - INFO -              bokeh at:        172.31.15.100:8789
+distributed.worker - INFO - Waiting to connect to:   tcp://172.31.4.217:45665
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                          1
+distributed.worker - INFO -                Memory:                    0.50 GB
+distributed.worker - INFO -       Local Directory:            worker-ylffx7s7
+distributed.worker - INFO - -------------------------------------------------
+tornado.application - ERROR - Future <tornado.concurrent.Future object at 0x7f0170ae5160> exception was never retrieved: Traceback (most recent call last):
